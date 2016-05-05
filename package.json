@@ -1,0 +1,30 @@
+{
+  "name": "igsubscriber",
+  "version": "0.0.1",
+  "description": "Subscribe to IG.com's financial Lightstreamer feed and push all live data to Redis",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "author": "Peter Cooper",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.8.0",
+    "dotenv": "^2.0.0",
+    "lightstreamer-client": "^6.2.7",
+    "moment": "^2.13.0",
+    "redis": "^2.6.0-2"
+  },
+  "babel": {
+    "presets": [
+      "node5"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "babel-preset-node5": "^11.0.2",
+    "babel-register": "^6.8.0",
+    "eslint": "^2.9.0"
+  }
+}

@@ -112,6 +112,7 @@ createSession().then(tokens => {
       db.publish(data['MARKET'] + ":" + k, JSON.stringify(data))
       db.hset(key, k, data[k])
       db.zadd(data['MARKET'], data['TIMESTAMP'], data['BID'] + ":" + data['OFFER'])
+      db.set(data['MARKET'] + ":LIVE", "true", "ex", 30)
     }
   }))
 }).catch(reason => console.log('FAILURE: ' + reason))
